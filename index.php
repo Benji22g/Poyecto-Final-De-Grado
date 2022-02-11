@@ -34,14 +34,13 @@ include('usuarios.php');
 </head>
 
 <body class="">
-  
   <div class="wrapper ">
     <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
       <div class="logo"><a onClick="window.location.reload();" class="simple-text logo-normal">
           BookNatur
         </a></div>
       <br>
-      <center><span class="usertop">Usuario: <span style="font-size: 18px;"><?php echo $_SESSION['usuario']?></span></span><br>
+      <center><span class="usertop">Usuario: <span style="font-size: 18px;"><?php echo $_SESSION['usuario'] ?></span></span><br>
         <a href="index.php?logout='1'" class="quitbutton">Deslogar</a><br></li>
       </center>
       <div class="sidebar-wrapper">

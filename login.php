@@ -1,5 +1,4 @@
 <?php
-  require 'database.php';
 	require_once 'usuarios.php';
 	$u = new Usuario;
 ?>
@@ -20,8 +19,8 @@
 	</div>
 	<form method="post" action="login.php">
 		<div class="input-group">
-			<h3>Nick</h3>
-			<input type="text" name="nick" >
+			<h3>Usuario</h3>
+			<input type="text" name="usuario" >
 		</div>
 		<div class="input-group">
 			<h3>Contraseña</h3>
@@ -35,13 +34,13 @@
 		</center>
 	</form>
 	<?php
-		if(isset($_POST['nick'])){
-			$nick = addslashes($_POST['nick']);
+		if(isset($_POST['usuario'])){
+			$usuario = addslashes($_POST['usuario']);
 			$senha = addslashes($_POST['senha']);
-			if(!empty($nick) && !empty($senha)){
+			if(!empty($usuario) && !empty($senha)){
 				$u->conectar("myitems","localhost","root","");
 				if($u->msgError == ""){
-					if($u->logar($nick,$senha)){
+					if($u->logar($usuario,$senha)){
 						header("location: index.php");
 					}
 					else{

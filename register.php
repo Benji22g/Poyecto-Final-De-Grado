@@ -44,7 +44,6 @@
 			<label>Senha</label>
 			<input type="password" name="senha">
 		</div>
-
 		<div class="input-group">
 			<label>Confirmar senha</label>
 			<input type="password" name="senhaConf">

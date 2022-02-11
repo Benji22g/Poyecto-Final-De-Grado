@@ -12,7 +12,6 @@ if (isset($_GET['logout'])) {
   header("location: login.php");
 }
 include('usuarios.php');
-
 ?>
 <!DOCTYPE html>
 <html lang="pt-Br" class="no-js">
@@ -82,6 +81,7 @@ include('usuarios.php');
     <center>
       <div class="produtos">
         <div class="card" style="width:300px">
+          <center><img class="card-img-top" style="width:200px; height:200px;" src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KW1Zwwo4NUX4oFJZEHLbXK9QlSPcUhuR5eWF7VCO2g2sDBR1x4Ghdfua-pLwJywLzBfDBN_si3mL-Yn_jhP7_UhHgA18lwmO7Eu9yh2gzn-0FvMj-lIYDHJ1Q5MF_T_QK6yOe5gce9upvMnyY1vScm5yvD30vgcOTlkPE/360fx360f" alt=""></center>
           <div class="card-body">
             <h4 class="card-title">Alma Transversante da Testemunha Carmesim (Insculpido)</h4>
             <p class="card-text" style="color: black;">Ombro (Imortal)</p>
