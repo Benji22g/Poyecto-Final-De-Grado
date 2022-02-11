@@ -13,12 +13,14 @@ class Usuario
 			$msgError = $e->getMessage();
 		}
 	}
-	public function cadastrar($usuario, $email, $senha){
+	public function cadastrar($nick, $email, $senha, $name, $lastname){
 		global $pdo;
 		//verificar se já existe email cadastrado!
-		$sql = $pdo->prepare("SELECT id FROM usuarios WHERE usuario = :u");
-		$sql->bindValue(":u",$usuario);
+		$sql = $pdo->prepare("SELECT id FROM usuarios WHERE nick = :u");
+		$sql->bindValue(":u",$nick);
+
 		$sql->execute();
+
 		if($sql->rowCount() > 0){
 			return false; //Já está cadastrada!
 		}else{
@@ -28,9 +30,12 @@ class Usuario
 			if($sql->rowCount() > 0){
 				return false; //Já está cadastrada!
 			}else{
-				$sql = $pdo->prepare("INSERT INTO usuarios (usuario, email, senha) VALUES (:u, :e, :s)");
-				$sql->bindValue(":u",$usuario);
+				$admin = false;
+				$sql = $pdo->prepare("INSERT INTO `USUARIOS`(`EMAIL`, `NICK`, `NAME`, `LASTNAME`, `SENHA`, `ADMIN`) VALUES (:e, :n, :na, :l, :s, false)");
 				$sql->bindValue(":e",$email);
+				$sql->bindValue(":n",$nick);
+				$sql->bindValue(":na",$name);
+				$sql->bindValue(":l",$lastname);
 				$sql->bindValue(":s",md5($senha));
 				$sql->execute();
 				return true; //cadastrado com sucesso!
