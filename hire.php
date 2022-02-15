@@ -33,10 +33,13 @@ include('usuarios.php');
 </head>
 
 <body class="">
+<?php
+      if($_SESSION['admin']){
+?>
   <div class="wrapper ">
     <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
       <div class="logo"><a onClick="window.location.reload();" class="simple-text logo-normal">
-          MyItems
+      BookNatur
         </a></div>
       <br>
       <center><span class="usertop">Usuário: <span style="font-size: 18px;"><?php echo $_SESSION['usuario'] ?></span></span><br>
@@ -49,24 +52,14 @@ include('usuarios.php');
               <p>Início</p>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="csgo.php">
-              <p>Busquedas</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="dota2.php">
-              <p>Reservas</p>
-            </a>
-          </li>
           <li class="nav-item active">
-            <a class="nav-link" href="tf2.php">
-              <p>Datos</p>
+            <a class="nav-link" href="csgo.php">
+              <p>Alquileres</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="tf2.php">
-              <p>Contacta</p>
+            <a class="nav-link" href="users.php">
+              <p>Usuarios</p>
             </a>
           </li>
           <li class="nav-item active-pro">
@@ -76,6 +69,13 @@ include('usuarios.php');
           </li>
         </ul>
       </div>
+      <?php
+        }else{
+      ?>
+  <?php require 'menuuser.php' ?>
+<?php
+    }
+?>
     </div>
     <center>
       <br>
@@ -83,7 +83,7 @@ include('usuarios.php');
         <div class="card" style="width:300px">
           <center><img class="card-img-top" style="width:200px; height:200px;" src="https://community.cloudflare.steamstatic.com/economy/image/fWFc82js0fmoRAP-qOIPu5THSWqfSmTELLqcUywGkijVjZULUrsm1j-9xgEYfBVACiT2sD18hMHhBeaCAe4HpNY84a9Z2CRslE8rN-bkZjU2cVybUfgHDPY4pwq5WSFm7MU7V4Xv9etXLVjn5tfAN7V-LpgSSJn0O70B/360fx360f" alt=""></center>
           <div class="card-body">
-            <h4 class="card-title">O Capacete Cinético (Incomum )</h4>
+            <h4 class="card-title">ALOJAMIENTO 1</h4>
             <p class="card-text" style="color: black;">Chapéu nível 69</p>
             <a href="#" class="btn btn-primary">R$ 680,08</a>
           </div>
@@ -91,7 +91,7 @@ include('usuarios.php');
         <div class="card" style="width:300px;">
           <center><img class="card-img-top" style="width:200px; height:200px;" src="https://community.cloudflare.steamstatic.com/economy/image/fWFc82js0fmoRAP-qOIPu5THSWqfSmTELLqcUywGkijVjZULUrsm1j-9xgEMaQkUTxr2vTx8mMnvA-aHAfQ_ktk664MayTdinxVwPffiZAhuZgHPUPUPDK0F4w3tG3QN7sJwQN6g8vVeK1jp4YuVYuElNI1NTsLTX6OFYFv-6Usw0vBVfMHb9CPoiX7taTgORVO1rSRyrjem/360fx360f" alt=""></center>
           <div class="card-body">
-            <h4 class="card-title">Shot to Hell Espingarda (Festivizado)</h4>
+            <h4 class="card-title">ALOJAMIENTO 1</h4>
             <p class="card-text" style="color: black;">Espingarda Nível Comando</p>
             <a href="#" class="btn btn-primary">R$ 651,00</a>
           </div>
@@ -99,7 +99,7 @@ include('usuarios.php');
         <div class="card" style="width:300px;">
           <center><img class="card-img-top" style="width:200px; height:200px;" src="https://community.cloudflare.steamstatic.com/economy/image/fWFc82js0fmoRAP-qOIPu5THSWqfSmTELLqcUywGkijVjZULUrsm1j-9xgEBeQtADiTxtzdXt9vzBOazBOESnN97t5EC2GY8xFR9YrHkMWIxKlOUUvJdDaRrrFu8WSMw6cE3B4Hn9e5eKBKv6tVORHpMtw/360fx360f" alt=""></center>
           <div class="card-body">
-            <h4 class="card-title">O Zoot Suit do Zombador (Edição de Colecionador)</h4>
+            <h4 class="card-title">ALOJAMIENTO 1</h4>
             <p class="card-text" style="color: black;">Camisa nível 96</p>
             <a href="#" class="btn btn-primary">R$ 201,54</a>
           </div>

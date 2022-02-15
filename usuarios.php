@@ -5,6 +5,7 @@ class Usuario
 {
 	private $pdo;
 	public $msgError = "";
+	
 	public function conectar($nome, $host, $usuario, $senha){
 		global $pdo;
 		try{

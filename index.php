@@ -16,7 +16,6 @@ include('usuarios.php');
 ?>
 <!DOCTYPE html>
 <html lang="pt-Br" class="no-js">
-
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -32,15 +31,17 @@ include('usuarios.php');
   <link href="css/hsk.css" rel="stylesheet" />
   <script src="js/modernizr-custom.js"></script>
 </head>
-
 <body class="">
+<?php
+        if($_SESSION['admin']){
+      ?>
   <div class="wrapper ">
     <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
       <div class="logo"><a onClick="window.location.reload();" class="simple-text logo-normal">
           BookNatur
         </a></div>
       <br>
-      <center><span class="usertop">Usuario: <span style="font-size: 18px;"><?php echo $_SESSION['usuario'] ?></span></span><br>
+      <center><span class="usertop">Usuario: <span style="font-size: 18px;"><?php echo $_SESSION['usuario']?></span></span><br>
         <a href="index.php?logout='1'" class="quitbutton">Deslogar</a><br></li>
       </center>
       <div class="sidebar-wrapper">
@@ -51,24 +52,13 @@ include('usuarios.php');
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="csgo.php">
-              <p>Busquedas</p>
+            <a class="nav-link" href="hire.php">
+              <p>Alquileres</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="dota2.php">
-              <p>Reservas</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="dota2.php">
-              <p>Datos</p>
-            </a>
-          </li>
-
-          <li class="nav-item ">
-            <a class="nav-link" href="tf2.php">
-              <p>Contacta</p>
+            <a class="nav-link" href="users.php">
+              <p>Usuarios</p>
             </a>
           </li>
           <li class="nav-item active-pro">
@@ -78,6 +68,13 @@ include('usuarios.php');
           </li>
         </ul>
       </div>
+      <?php
+        }else{
+      ?>
+  <?php require 'menuuser.php' ?>
+<?php
+    }
+?>
     </div>
     <center>
       <br>
@@ -85,7 +82,7 @@ include('usuarios.php');
         <div class="card"  style="width:300px; cursor: pointer;">
           <center><img class="card-img-top" style="width:200px; height:200px; padding-top: 10px;" src="" alt=""></center>
           <div class="card-body">
-            <h4 class="card-title">Lorem, ipsum.</h4>
+            <h4 class="card-title">ALQUILER 1</h4>
           </div>
         </div>
         <div class="card" style="width:300px; cursor: pointer;">
@@ -98,7 +95,7 @@ include('usuarios.php');
           <center><img class="card-img-top" style="width:200px; height:200px; padding-top: 10px;" src="" alt=""></center>
           <div class="card-body">
             <h4 class="card-title">Lorem, ipsum.</h4>
-          </div>
+        </div>
           
           <div class="card,one"  style="width:300px; cursor: pointer;">
           <center><img class="card-img-top" style="width:200px; height:200px; padding-top: 10px;" src=""   alt=""></center>
@@ -106,9 +103,7 @@ include('usuarios.php');
             <h4 class="card-title">Lorem, ipsum.</h4>
           </div>
         </div>
-        
         </div>
-
       </div>
     </center>
   </div>

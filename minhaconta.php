@@ -48,15 +48,20 @@
 </head>
 
 <body class="">
+<?php
+        if($_SESSION['admin']){
+      ?>
   <div class="wrapper ">
     <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
       <div class="logo"><a onClick="window.location.reload();" class="simple-text logo-normal">
           BookNatur
-      </a></div>
+      </a>
+	</div>
 	  <br>
 	  <center><span class="usertop">Usuario: <span style="font-size: 18px;"><?php echo $_SESSION['usuario']?></span></span><br>
-    <a href="index.php?logout='1'" class="quitbutton">Deslogar</a><br></li></center>
-      <div class="sidebar-wrapper">
+    <a href="index.php?logout='1'" class="quitbutton">Deslogar</a><br></li>
+	</center>
+	<div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item">
             <a class="nav-link" href="index.php">
@@ -64,18 +69,13 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="csgo.php">
-              <p>Counter-Strike: Global Offensive</p>
+            <a class="nav-link" href="hire.php">
+              <p>Alquileres</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="dota2.php">
-              <p>Dota 2</p>
-            </a>
-          </li>
-		  <li class="nav-item ">
-            <a class="nav-link" href="tf2.php">
-              <p>Team Fortress 2</p>
+            <a class="nav-link" href="users.php">
+              <p>Usuarios</p>
             </a>
           </li>
           <li class="nav-item active-pro active">
@@ -85,15 +85,26 @@
           </li>
         </ul>
       </div>
-    </div>
+      <?php
+        }else{
+      ?>
+  <?php require 'menuuser.php' ?>
+<?php
+    }
+?>
+</div>
 	<center>
     <br>
-	<span class="usertop">IP: <span style="font-size: 18px;"><?php echo getRealIpAddr()?></span></span><br>
-    <span class="usertop">Usuário: <span style="font-size: 18px;"><?php echo $_SESSION['usuario']?></span></span><br>
-    <span class="usertop">NAME: <span style="font-size: 18px;"><?php echo $_SESSION['name']?></span></span><br>
-    <span class="usertop">LASTNAME: <span style="font-size: 18px;"><?php echo $_SESSION['lastname']?></span></span><br>
-    <span class="usertop">EMAIL: <span style="font-size: 18px;"><?php echo $_SESSION['email']?></span></span><br>
-    </center>
+	<div>
+		<table>
+			
+		<span class="usertop">IP: <span style="font-size: 18px;"><?php echo getRealIpAddr()?></span></span><br>
+		<span class="usertop">Usuário: <span style="font-size: 18px;"><?php echo $_SESSION['usuario']?></span></span><br>
+		<span class="usertop">NAME: <span style="font-size: 18px;"><?php echo $_SESSION['name']?></span></span><br>
+		<span class="usertop">LASTNAME: <span style="font-size: 18px;"><?php echo $_SESSION['lastname']?></span></span><br>
+		<span class="usertop">EMAIL: <span style="font-size: 18px;"><?php echo $_SESSION['email']?></span></span><br>
+      </div>
+	  </table>
   </div>
 	<script src="js/classie.js"></script>
 	<script src="js/dummydata.js"></script>

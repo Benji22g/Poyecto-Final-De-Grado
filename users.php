@@ -31,8 +31,10 @@ include('usuarios.php');
   <link href="css/hsk.css" rel="stylesheet" />
   <script src="js/modernizr-custom.js"></script>
 </head>
-
 <body class="">
+<?php
+        if($_SESSION['admin']){
+      ?>
   <div class="wrapper ">
     <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
       <div class="logo"><a onClick="window.location.reload();" class="simple-text logo-normal">
@@ -49,24 +51,14 @@ include('usuarios.php');
               <p>Início</p>
             </a>
           </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="hire.php">
+              <p>Alquileres</p>
+            </a>
+          </li>
           <li class="nav-item active">
-            <a class="nav-link" href="csgo.php">
-              <p>Busquedas</p>
-            </a>
-          </li>
-          <li class="nav-item ">
             <a class="nav-link" href="dota2.php">
-              <p>Reservas</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="tf2.php">
-              <p>Datos</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="tf2.php">
-              <p>Contacta</p>
+              <p>Usuarios</p>
             </a>
           </li>
           <li class="nav-item active-pro">
@@ -76,35 +68,21 @@ include('usuarios.php');
           </li>
         </ul>
       </div>
+      <?php
+        }else{
+      ?>
+  <?php require 'menuuser.php' ?>
+<?php
+    }
+?>
     </div>
     <center>
       <br>
-      <div class="produtos">
-        <div class="card" style="width:300px">
-          <center><img class="card-img-top" style="width:200px; height:200px;" src="" alt=""></center>
-          <div class="card-body">
-            <h4 class="card-title">AK-47 | Legião de Anúbis</h4>
-            <p class="card-text" style="color: black;">Rifle (Oculto)</p>
-            <a href="#" class="btn btn-primary">R$ 480,97</a>
+      <div class="produtos" id="proajax">
+      <div id="insert" class="card-body">
+            
           </div>
-        </div>
-        <div class="card" style="width:300px;">
-          <center><img class="card-img-top" style="width:200px; height:200px;" src="" alt=""></center>
-          <div class="card-body">
-            <h4 class="card-title">M4A4 | Fada dos Dentes</h4>
-            <p class="card-text" style="color: black;">Rifle (Secreto)</p>
-            <a href="#" class="btn btn-primary">R$ 149,30</a>
-          </div>
-        </div>
-        <div class="card" style="width:300px;">
-          <center><img class="card-img-top" style="width:200px; height:200px;" src="" alt=""></center>
-          <div class="card-body">
-            <h4 class="card-title">Glock-18 | Vogue</h4>
-            <p class="card-text" style="color: black;">Pistola (Secreto)</p>
-            <a href="#" class="btn btn-primary">R$ 134,47</a>
-          </div>
-        </div>
-      </div>
+      </div>  
 
     </center>
   </div>
@@ -115,5 +93,6 @@ include('usuarios.php');
     var usuario = "<?php echo $_SESSION['usuario']; ?>";
   </script>
 </body>
+<script src="./getUsers.js"></script>
 
 </html>
