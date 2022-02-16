@@ -60,11 +60,11 @@ $sql = "CREATE TABLE ALOJAMIENTO(
   ID_ALOJAMIENTO INT(30) AUTO_INCREMENT PRIMARY KEY,
   NAME VARCHAR(100) NOT NULL UNIQUE,
   PRICEDAY INT(30) NOT NULL,
-  PRICETOTAL INT(30) NOT NULL,
-  DATEFREE VARCHAR(100),
-  DATEBUSY VARCHAR(100),
+  DATE VARCHAR(100) NOT NULL,
+  CAPACITY INT(30) NOT NULL,
   ADDRESS VARCHAR(100) NOT NULL,
   URL VARCHAR(100) NOT NULL,
+  RESERVED BOOLEAN NOT NULL,
   ID_LOCALIDAD INT(30),
   ID_CATEGORY INT(30),
   CONSTRAINT FK_LOCALIDAD FOREIGN KEY(ID_LOCALIDAD) REFERENCES LOCALIDAD(ID_LOCALIDAD),
@@ -100,35 +100,21 @@ try {
 } catch (Exception $e) {
 }
 
-$sql = "INSERT INTO `CATEGORY`(`NAME`) VALUES ('PLAYA');";
+$sql = "INSERT INTO `CATEGORY`(`NAME`) VALUES ('CASAS');";
 
 try {
   $conn->query($sql);
 } catch (Exception $e) {
 }
 
-$sql = "INSERT INTO `CATEGORY`(`NAME`) VALUES ('URBANO');";
+$sql = "INSERT INTO `CATEGORY`(`NAME`) VALUES ('PISOS');";
 
 try {
   $conn->query($sql);
 } catch (Exception $e) {
 }
 
-$sql = "INSERT INTO `CATEGORY`(`NAME`) VALUES ('SPA');";
-
-try {
-  $conn->query($sql);
-} catch (Exception $e) {
-}
-
-$sql = "INSERT INTO `CATEGORY`(`NAME`) VALUES ('CAMPO');";
-
-try {
-  $conn->query($sql);
-} catch (Exception $e) {
-}
-
-$sql = "INSERT INTO `CATEGORY`(`NAME`) VALUES ('BOSQUE');";
+$sql = "INSERT INTO `CATEGORY`(`NAME`) VALUES ('CAMPOS');";
 
 try {
   $conn->query($sql);

@@ -22,8 +22,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $admin = $_GET['ADMIN'];
     $orderBD = "UPDATE USUARIOS SET EMAIL='$email', NICK='$nick',NAME='$name',LASTNAME='$lastname', ADMIN ='$admin' WHERE ID=$idUser";
     $conn->query($orderBD);
-    $orderBD = "SELECT * FROM USUARIOS WHERE ID='$idUser'";
-    $results = $conn->query($orderBD);
     echo json_encode($results->fetch_all());
 } elseif ($_SERVER['REQUEST_METHOD'] == 'DELETE') {
     header("HTTP/1.1 200 DELETE");

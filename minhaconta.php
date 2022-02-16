@@ -132,7 +132,7 @@
 		<table>
 			
 		<span class="usertop">IP: <span style="font-size: 18px;"><?php echo getRealIpAddr()?></span></span><br>
-		<span class="usertop">Usuário: <span style="font-size: 18px;"><?php echo $_SESSION['usuario']?></span></span><br>
+		<span class="usertop">NICK: <span style="font-size: 18px;"><?php echo $_SESSION['usuario']?></span></span><br>
 		<span class="usertop">NAME: <span style="font-size: 18px;"><?php echo $_SESSION['name']?></span></span><br>
 		<span class="usertop">LASTNAME: <span style="font-size: 18px;"><?php echo $_SESSION['lastname']?></span></span><br>
 		<span class="usertop">EMAIL: <span style="font-size: 18px;"><?php echo $_SESSION['email']?></span></span><br>
@@ -144,7 +144,6 @@
 	<script src="js/main.js"></script>
 	<script>
 		var usuario = "<?php echo $_SESSION['usuario']; ?>";
-	
 	</script>
 </body>
 

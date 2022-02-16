@@ -86,6 +86,7 @@ include('usuarios.php');
                   <th>name</th>
                   <th>lastname</th>
                   <th>email</th>
+                  <th>admin</th>
                   <th>id</th>
                   <th></th>
                 </tr>
@@ -96,6 +97,17 @@ include('usuarios.php');
             </table>
 
           </div>
+        </div>
+        <div>
+          <form id="formularioupd">
+            <input type="number" name="id" placeholder="id"><br><br>
+            <input type="text" name="nick" placeholder="nick" >
+            <input type="text" name="name" placeholder="name">
+            <input type="text" name="lastname" placeholder="lastname">
+            <input type="text" name="email" placeholder="email" ><br><br>
+            <input type="number" name="admin" placeholder="admin">
+            <button type="submit" name="update" value="update"> Update</button>
+          </form>
         </div>
 
       </center>
@@ -108,5 +120,6 @@ include('usuarios.php');
     </script>
 </body>
 <script src="./getUsers.js"></script>
+<script src="./updUsers.js"></script>
 
 </html>

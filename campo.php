@@ -52,14 +52,19 @@ include('usuarios.php');
               <p>Início</p>
             </a>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="hire.php">
-              <p>Alquileres</p>
+          <li class="nav-item">
+            <a class="nav-link" href="casa.php">
+              <p>CASA</p>
             </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="users.php">
-              <p>Usuarios</p>
+          <li class="nav-item">
+            <a class="nav-link" href="piso.php">
+              <p>PISO</p>
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="campo.php">
+              <p>CAMPO</p>
             </a>
           </li>
           <li class="nav-item active-pro">
@@ -72,50 +77,17 @@ include('usuarios.php');
       <?php
         }else{
       ?>
-  <?php require 'menuuser.php' ?>
-<?php
-    }
-?>
-    </div>
-    <center>
-      <br>
-      <div class="produtos">
-      <div class="card" style="width:300px">
-          <center><img class="card-img-top" style="width:200px; height:200px;" src="img/3643769-building-home-house-main-menu-start_113416.svg" alt=""></center>
-          <div class="card-body">
-            <h4 class="card-title">CASAS</h4>
-            <a href="casa.php" class="btn btn-warning">Enviar</a>
-          </div>
+        <?php require 'menuuser.php' ?>
+        <?php
+                 }
+        ?>
         </div>
-        <div class="card" style="width:300px;">
-          <center><img class="card-img-top" style="width:200px; height:200px;" src="img/bloque-de-pisos.png" alt=""></center>
-          <div class="card-body">
-            <h4 class="card-title">PISOS</h4>
-            <a href="piso.php" class="btn btn-warning">Enviar</a>
-          </div>
-        </div>
-        <div class="card" style="width:300px;">
-          <center><img class="card-img-top" style="width:200px; height:200px;" src="img/2d16e03eabc902c00ddaff5e1de304ef-casas-1.png" alt=""></center>
-          <div class="card-body">
-            <h4 class="card-title">CAMPOS</h4>
-            <a href="campo.php" class="btn btn-warning">Enviar</a>
-          </div>
-        </div>
-      </div>
-      <div>
-        <form id="formularioins">
-            <input type="number" name="id" placeholder="id"><br>
-            <input type="text" name="name" placeholder="name">
-            <input type="number" name="priceday" placeholder="priceday"><br>
-            <input type="date" name="date" placeholder="date" >
-            <input type="number" name="capacity" placeholder="capacity">
-            <input type="text" name="address" placeholder="address"><br>
-            <input type="text" name="url" placeholder="url">
-            <input type="number" name="reserved" placeholder="reserved">
-            <input type="text" name="idlocalidad" placeholder="idlocalidad">
-            <input type="text" name="idcategory" placeholder="idcategory"><br>
-            <button type="submit" name="insert" value="insert"> Insert</button>
-        </form>
+        <center>
+         <br>
+            <div class="produtos">
+
+      <div div>
+        <p>jdsahdjsahdjiash</p>
       </div>
   </div>
   <script src="js/classie.js"></script>

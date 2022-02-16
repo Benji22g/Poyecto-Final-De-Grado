@@ -105,9 +105,9 @@ include('usuarios.php');
         </ul>
       </div>
       
-<?php
-    }
-?>
+        <?php
+       }
+        ?>
     </div>
     <center>
       <br>
@@ -124,6 +124,5 @@ include('usuarios.php');
   </script>
 </body>
 <script src="./getAlojamiento.js"></script>
-
 
 </html>
