@@ -23,7 +23,7 @@ try {
 
 $sql = "CREATE TABLE CATEGORY(
   ID_CATEGORY INT(30) AUTO_INCREMENT PRIMARY KEY,
-  NAME VARCHAR(100) NOT NULL);
+  NAME VARCHAR(100) NOT NULL UNIQUE);
 ";
 
 try {
@@ -33,7 +33,7 @@ try {
 
 $sql = "CREATE TABLE LOCALIDAD(
   ID_LOCALIDAD INT(30) AUTO_INCREMENT PRIMARY KEY,
-  NAME VARCHAR(100) NOT NULL);
+  NAME VARCHAR(100) NOT NULL UNIQUE);
 ";
 
 try {
@@ -64,6 +64,7 @@ $sql = "CREATE TABLE ALOJAMIENTO(
   DATEFREE VARCHAR(100),
   DATEBUSY VARCHAR(100),
   ADDRESS VARCHAR(100) NOT NULL,
+  URL VARCHAR(100) NOT NULL,
   ID_LOCALIDAD INT(30),
   ID_CATEGORY INT(30),
   CONSTRAINT FK_LOCALIDAD FOREIGN KEY(ID_LOCALIDAD) REFERENCES LOCALIDAD(ID_LOCALIDAD),
@@ -99,8 +100,396 @@ try {
 } catch (Exception $e) {
 }
 
+$sql = "INSERT INTO `CATEGORY`(`NAME`) VALUES ('PLAYA');";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql = "INSERT INTO `CATEGORY`(`NAME`) VALUES ('URBANO');";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql = "INSERT INTO `CATEGORY`(`NAME`) VALUES ('SPA');";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql = "INSERT INTO `CATEGORY`(`NAME`) VALUES ('CAMPO');";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql = "INSERT INTO `CATEGORY`(`NAME`) VALUES ('BOSQUE');";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Alava')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Albacete')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Alicante')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Almeria')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Ávila')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Badajoz')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Islas Baleares')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Barcelona')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Burgos')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Caceres')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Cadiz')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Castellon')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Ciudad Real')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Cordoba')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('A Coruña')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Cuenca')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Girona')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Granada')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Guadalajara')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Gipuzkoa')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Huelva')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Huesca')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Jaen')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Leon')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Lleida')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Lugo')";
 
 
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
 
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Lugo')";
 
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Madrid')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Málaga')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Murcia')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Navarra')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Ourense')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Asturias')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Palencia')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Las Palmas')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Salamanca')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Santa Cruz de Tenerife')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Cantabria')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Segovia')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Sevilla')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Soria')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Tarragona')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Teruel')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Toledo')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Valencia')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Valladolid')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Bizkaia')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Zamora')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Zaragoza')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Ceuta')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
+
+$sql="INSERT INTO LOCALIDAD (NAME) VALUES('Melilla')";
+
+try {
+  $conn->query($sql);
+} catch (Exception $e) {
+}
 ?>

@@ -88,7 +88,40 @@
       <?php
         }else{
       ?>
-  <?php require 'menuuser.php' ?>
+	    <div class="wrapper ">
+    <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
+      <div class="logo"><a onClick="window.location.reload();" class="simple-text logo-normal">
+          BookNatur
+      </a>
+	</div>
+	  <br>
+	  <center><span class="usertop">Usuario: <span style="font-size: 18px;"><?php echo $_SESSION['usuario']?></span></span><br>
+    <a href="index.php?logout='1'" class="quitbutton">Deslogar</a><br></li>
+	</center>
+	<div class="sidebar-wrapper">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.php">
+              <p>Início</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="booking.php">
+              <p>Reservas</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="bookingrecords.php">
+              <p>Historial de reservas</p>
+            </a>
+          </li>
+          <li class="nav-item active-pro active">
+            <a class="nav-link" href="minhaconta.php">
+			  <p>Mi cuenta</p>
+            </a>
+          </li>
+        </ul>
+      </div>
 <?php
     }
 ?>

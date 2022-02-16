@@ -71,41 +71,61 @@ include('usuarios.php');
       <?php
         }else{
       ?>
+<div class="wrapper ">
+    <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
+      <div class="logo"><a onClick="window.location.reload();" class="simple-text logo-normal">
+          BookNatur
+        </a></div>
+      <br>
+      <center><span class="usertop">Usuário: <span style="font-size: 18px;"><?php echo $_SESSION['usuario'] ?></span></span><br>
+        <a href="index.php?logout='1'" class="quitbutton">Deslogar</a><br></li>
+      </center>
+      <div class="sidebar-wrapper">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.php">
+              <p>Início</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="booking.php">
+              <p>Reservas</p>
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="bookingrecords.php">
+              <p>Historial de Reservas</p>
+            </a>
+          </li>
+          <li class="nav-item active-pro">
+            <a class="nav-link" href="minhaconta.php">
+              <p>Mi cuenta</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+
 <?php
     }
 ?>
-      </div>
-      <center>
-        <br>
-        <div class="produtos" id="proajax">
-          <div>
-            <table class="table table-bordered table-sm">
-              <thead>
-                <tr>
-                  <th>nick</th>
-                  <th>name</th>
-                  <th>lastname</th>
-                  <th>email</th>
-                  <th>id</th>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody id="insert"> 
-             
-              </tbody>
-            </table>
-
-          </div>
-        </div>
-
-      </center>
     </div>
-    <script src="js/classie.js"></script>
-    <script src="js/dummydata.js"></script>
-    <script src="js/main.js"></script>
-    <script>
-      var usuario = "<?php echo $_SESSION['usuario']; ?>";
-    </script>
+    <center>
+      <br>
+      <div class="produtos" id="proajax">
+      <div id="insert" class="card-body">
+            
+      </div>
+      </div>  
+
+    </center>
+  </div>
+  <script src="js/classie.js"></script>
+  <script src="js/dummydata.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    var usuario = "<?php echo $_SESSION['usuario']; ?>";
+  </script>
 </body>
 <script src="./getUsers.js"></script>
 
