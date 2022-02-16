@@ -104,9 +104,8 @@ include('usuarios.php');
       </div>
       <div>
         <form id="formularioins">
-            <input type="number" name="id" placeholder="id"><br>
             <input type="text" name="name" placeholder="name">
-            <input type="number" name="priceday" placeholder="priceday"><br>
+            <input type="number" name="priceday" placeholder="priceday">
             <input type="date" name="date" placeholder="date" >
             <input type="number" name="capacity" placeholder="capacity">
             <input type="text" name="address" placeholder="address"><br>
@@ -125,5 +124,7 @@ include('usuarios.php');
     var usuario = "<?php echo $_SESSION['usuario']; ?>";
   </script>
 </body>
+<script src="./insAlojamiento.js"></script>
+
 
 </html>

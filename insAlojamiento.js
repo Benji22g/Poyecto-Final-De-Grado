@@ -3,7 +3,6 @@ formulario.addEventListener("submit",function(e){
 e.preventDefault();
 console.log("click");
  var datos = new FormData(formulario);
- var id = datos.get("id");
  var name = datos.get("name");
  var priceday = datos.get("priceday");
  var date = datos.get("date");
@@ -15,8 +14,8 @@ console.log("click");
  var idcategory = datos.get("idcategory");
 
  var xhttp = new XMLHttpRequest();
- xhttp.open("INSERT", "http://localhost/astu-poyecto%20final/Poyecto-Final-De-Grado-main/apiUser.php?ID=" + id + "&EMAIL=" + email + "&NICK=" +nick+"&NAME="+ name+"&LASTNAME="+lastname + "&ADMIN="+ admin, false);
- console.log("http://localhost/astu-poyecto%20final/Poyecto-Final-De-Grado-main/apiUser.php?ID=" + id + "&EMAIL=" + email + "&NICK=" +nick+"&NAME="+ name+"&LASTNAME="+lastname + "&ADMIN="+admin)
+ xhttp.open("INSERT", "http://localhost/astu-poyecto%20final/Poyecto-Final-De-Grado-main/apiAlojamiento.php?PRICEDAY=" + priceday + "&DATE=" +date+"&NAME="+ name+"&CAPACITY="+capacity + "&ADDRESS="+ address+ "&url="+ url+ "&RESERVED="+ reserved+ "&ID_LOCALIDAD="+ idlocalidad+ "&ID_CATEGORY="+ idcategory, false);
+ console.log("http://localhost/astu-poyecto%20final/Poyecto-Final-De-Grado-main/apiAlojamiento.php?PRICEDAY=" + priceday + "&DATE=" +date+"&NAME="+ name+"&CAPACITY="+capacity + "&ADDRESS="+ address+ "&url="+ url+ "&RESERVED="+ reserved+ "&ID_LOCALIDAD="+ idlocalidad+ "&ID_CATEGORY="+ idcategory)
  xhttp.send();
 
 })
