@@ -12,7 +12,7 @@ console.log("click");
 
  var xhttp = new XMLHttpRequest();
  xhttp.open("PUT", "../Poyecto-Final-De-Grado-main/apiUser.php?ID=" + id + "&EMAIL=" + email + "&NICK=" +nick+"&NAME="+ name+"&LASTNAME="+lastname + "&ADMIN="+ admin, false);
- console.log("http://localhost/astu-poyecto%20final/Poyecto-Final-De-Grado-main/apiUser.php?ID=" + id + "&EMAIL=" + email + "&NICK=" +nick+"&NAME="+ name+"&LASTNAME="+lastname + "&ADMIN="+admin)
+ console.log("../Poyecto-Final-De-Grado-main/apiUser.php?ID=" + id + "&EMAIL=" + email + "&NICK=" +nick+"&NAME="+ name+"&LASTNAME="+lastname + "&ADMIN="+admin)
  xhttp.send();
 
 })

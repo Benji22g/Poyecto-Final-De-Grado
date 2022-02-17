@@ -97,7 +97,7 @@ include('usuarios.php');
         <div class="card" style="width:300px;">
           <center><img class="card-img-top" style="width:200px; height:200px;" src="img/2d16e03eabc902c00ddaff5e1de304ef-casas-1.png" alt=""></center>
           <div class="card-body">
-            <h4 class="card-title">CAMPOS</h4>
+            <h4 class="card-title">CASAS RURALES</h4>
             <a href="campo.php" class="btn btn-warning">Enviar</a>
           </div>
         </div>
@@ -111,10 +111,14 @@ include('usuarios.php');
             <input type="text" name="address" placeholder="address"><br>
             <input type="text" name="url" placeholder="url">
             <input type="number" name="reserved" placeholder="reserved">
+            <input type="number" name="quantityDay" placeholder="quantityDay">
             <input type="text" name="idlocalidad" placeholder="idlocalidad">
             <input type="text" name="idcategory" placeholder="idcategory"><br>
             <button type="submit" name="insert" value="insert"> Insert</button>
         </form>
+        <div id="insert">
+          
+        </div>
       </div>
   </div>
   <script src="js/classie.js"></script>

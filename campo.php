@@ -64,7 +64,7 @@ include('usuarios.php');
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="campo.php">
-              <p>CAMPO</p>
+              <p>CASAS RURALES</p>
             </a>
           </li>
           <li class="nav-item active-pro">
@@ -87,7 +87,6 @@ include('usuarios.php');
             <div class="produtos" id="insert">
 
       <div div>
-        <p>jdsahdjsahdjiash</p>
       </div>
   </div>
   <script src="js/classie.js"></script>

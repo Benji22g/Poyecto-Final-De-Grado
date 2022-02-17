@@ -64,7 +64,7 @@ include('usuarios.php');
           </li>
           <li class="nav-item">
             <a class="nav-link" href="campo.php">
-              <p>CAMPO</p>
+              <p>CASAS RURALES</p>
             </a>
           </li>
           <li class="nav-item active-pro">
@@ -85,7 +85,6 @@ include('usuarios.php');
         <center>
          <br>
             <div class="produtos">
-
       <div id="insert">
       </div>
   </div>

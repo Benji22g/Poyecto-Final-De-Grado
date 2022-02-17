@@ -8,7 +8,7 @@ window.onload = function (){
             
         for(i = 0; i < variable.length; i++){
 
-            var insertadmin = document.getElementById("insertadmin");
+            var insert = document.getElementById("insertuser");
 
             var id = variable[i].ID_ALOJAMIENTO;
             var name = variable[i].NAME;
@@ -30,18 +30,18 @@ window.onload = function (){
             var p5 = '<p class="card-text" style="color: black;">'+categoria+'</p>';
             var p6 = '<p class="card-text" style="color: black;">'+date+ " "+quantityDay+'</p><br>';
             var p7 = '<p class="card-text" style="color: black;">'+capacity+'</p><br>';
-            var b1 = `<td><button id="${id}" type="submit" class="btn btn-danger btn-block text-center" name="Eliminar" value="Eliminar" onclick=deleteAlojamiento(this)>  eliminar</td>`;
+            var b1 = `<td><button id="${id}" type="submit" class="btn btn-danger btn-block text-center" name="Reservar" value="Reservar" onclick=reservarAlojamiento(this)>Reservar</td>`;
             
-            insertadmin.insertAdjacentHTML('beforeend', h1);
-            insertadmin.insertAdjacentHTML('beforeend', h2);
-            insertadmin.insertAdjacentHTML('beforeend', p1);
-            insertadmin.insertAdjacentHTML('beforeend', p2);
-            insertadmin.insertAdjacentHTML('beforeend', p3);
-            insertadmin.insertAdjacentHTML('beforeend', p4);
-            insertadmin.insertAdjacentHTML('beforeend', p5);
-            insertadmin.insertAdjacentHTML('beforeend', p6);
-            insertadmin.insertAdjacentHTML('beforeend', p7);
-            insertadmin.insertAdjacentHTML('beforeend', b1);
+            insert.insertAdjacentHTML('beforeend', h1);
+            insert.insertAdjacentHTML('beforeend', h2);
+            insert.insertAdjacentHTML('beforeend', p1);
+            insert.insertAdjacentHTML('beforeend', p2);
+            insert.insertAdjacentHTML('beforeend', p3);
+            insert.insertAdjacentHTML('beforeend', p4);
+            insert.insertAdjacentHTML('beforeend', p5);
+            insert.insertAdjacentHTML('beforeend', p6);
+            insert.insertAdjacentHTML('beforeend', p7);
+            insert.insertAdjacentHTML('beforeend', b1);
 
         }
         
@@ -50,9 +50,7 @@ window.onload = function (){
     }
     
 }
-function deleteAlojamiento(thisobj) {
+function reservarAlojamiento(thisobj) {
     var xhttp = new XMLHttpRequest();
-    var id = thisobj.getAttribute("id");
-    xhttp.open("DELETE", "../Poyecto-Final-De-Grado-main/apiAlojamiento.php?ID_ALOJAMIENTO=" + id, false);
     xhttp.send();
 }

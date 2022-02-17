@@ -15,6 +15,7 @@ window.onload = function (){
             var date = variable[i].DATE;
             var capacity = variable[i].CAPACITY;
             var address = variable[i].ADDRESS;
+            var quantityDay = variable[i].QUANTITYDAY;
             var url = variable[i].URL;
             var localidad = variable[i].ID_LOCALIDAD;
             var categoria = variable[i].ID_CATEGORY;
@@ -26,7 +27,7 @@ window.onload = function (){
             var p3 = '<p class="card-text" style="color: black;">'+address+'</p>';
             var p4 = '<p class="card-text" style="color: black;">'+localidad+'</p>';
             var p5 = '<p class="card-text" style="color: black;">'+categoria+'</p>';
-            var p6 = '<p class="card-text" style="color: black;">'+date+'</p><br>';
+            var p6 = '<p class="card-text" style="color: black;">'+date+ " "+quantityDay+'</p><br>';
             var p7 = '<p class="card-text" style="color: black;">'+capacity+'</p><br>';
 
             insert.insertAdjacentHTML('beforeend', h1);

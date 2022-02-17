@@ -21,7 +21,6 @@ window.onload = function () {
                     madmin = "admin";
                 }else{
                     madmin = "user";
-
                 }
                 var h4 = '<td id="hola">' + nick + '</td>';
                 var p1 = '<td>' + name + '</td>';
@@ -45,6 +44,6 @@ window.onload = function () {
 function deleteUser() {
     var xhttp = new XMLHttpRequest();
     var id = document.getElementById('identificador').textContent;
-    xhttp.open("DELETE", "http://localhost/astu-poyecto%20final/Poyecto-Final-De-Grado-main/apiUser.php?ID=" + id, false);
+    xhttp.open("DELETE", "../Poyecto-Final-De-Grado-main/apiUser.php?ID=" + id, false);
     xhttp.send();
 }

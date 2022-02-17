@@ -3,18 +3,24 @@ formulario.addEventListener("submit",function(e){
 e.preventDefault();
 console.log("click");
  var datos = new FormData(formulario);
- var name = datos.get("name");
- var priceday = datos.get("priceday");
- var date = datos.get("date");
- var capacity = datos.get("capacity");
- var address = datos.get("address");
- var url = datos.get("url");
- var reserved = datos.get("reserved");
- var idlocalidad = datos.get("idlocalidad");
- var idcategory = datos.get("idcategory");
+ var insert = document.getElementById("insert");
+var p = "INSERT";
+ datos.append("NAME",datos.get("name"));
+ datos.append("PRICEDAY",datos.get("priceday"));
+ datos.append("DATE",datos.get("date"));
+ datos.append("CAPACITY",datos.get("capacity"));
+ datos.append("ADDRESS",datos.get("address"));
+ datos.append("URL",datos.get("url"));
+ datos.append("RESERVED",datos.get("reserved"));
+ datos.append("ID_LOCALIDAD",datos.get("idlocalidad"));
+ datos.append("ID_CATEGORY",datos.get("idcategory"));
+ datos.append("QUANTITYDAY",datos.get("quantityDay"));
 
  var xhttp = new XMLHttpRequest();
- xhttp.open("POST", "../Poyecto-Final-De-Grado-main/apiAlojamiento.php?PRICEDAY=" + priceday + "&DATE=" +date+"&NAME="+ name+"&CAPACITY="+capacity + "&ADDRESS="+ address+ "&url="+ url+ "&RESERVED="+ reserved+ "&ID_LOCALIDAD="+ idlocalidad+ "&ID_CATEGORY="+ idcategory, false);
- xhttp.send();
+ xhttp.open("POST", "../Poyecto-Final-De-Grado-main/apiAlojamiento.php",true);
+ xhttp.send(datos);
+ insert.insertAdjacentHTML('beforeend', p);
+
+
 
 })

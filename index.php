@@ -110,10 +110,23 @@ include('usuarios.php');
         ?>
     </div>
       <br>
-      <div class="produtos" id="insert">
+      <?php
+        if($_SESSION['admin']){
+      ?>
+      <div class="produtos" id="insertadmin">
 
       </div>
+      <script src="./getAlojamiento.js"></script>
+      <?php
+        }else{
+      ?>
+     <div class="produtos" id="insertuser">
 
+      </div>
+      <script src="./getAlojamientoUser.js"></script>
+      <?php
+        }
+      ?>
   </div>
 
 
@@ -126,7 +139,6 @@ include('usuarios.php');
   
   
 </body>
-<script src="./getAlojamiento.js"></script>
 <script>
 
 </script>
