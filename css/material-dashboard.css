@@ -3535,8 +3535,11 @@ input[type="button"].btn-block {
 html * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow: scroll;
 
+}
+
+.scroll-bengi{
+  overflow: scroll;
 }
 
 body,

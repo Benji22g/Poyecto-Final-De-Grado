@@ -41,19 +41,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 } elseif ($_SERVER['REQUEST_METHOD'] == 'PUT') {
     header("HTTP/1.1 200 UPDATE");
     $idAlojamiento = $_GET['ID_ALOJAMIENTO'];
-    $name = $_GET['NAME'];
-    $priceday = $_GET['PRICEDAY'];
-    $date = $_GET['DATE'];
-    $capacity = $_GET['CAPACITY'];
-    $address = $_GET['ADDRESS'];
-    $url = $_GET['URL'];
     $reserved = $_GET['RESERVED'];
-    $quantityDay = $_GET['QUANTITYDAY'];
-    $idlocalidad = $_GET['ID_LOCALIDAD'];
-    $idcategory = $_GET['ID_CATEGORY'];
-    $orderBD = "UPDATE ALOJAMIENTO SET NAME='$name', PRICEDAY='$priceday',DATE='$date',CAPACITY='$capacity',ADDRESS='$address',URL='$url',RESERVED='$reserved', QUANTITYDAY = '$quantityDay', ID_LOCALIDAD='$idlocalidad',ID_CATEGORY='$idcategory' WHERE ID=$idAlojamiento";
+    $orderBD = "UPDATE ALOJAMIENTO SET RESERVED=$reserved WHERE ID_ALOJAMIENTO=$idAlojamiento";
     $conn->query($orderBD);
-    echo json_encode($results->fetch_all());
 } elseif ($_SERVER['REQUEST_METHOD'] == 'DELETE') {
     header("HTTP/1.1 200 DELETE");
     $idAlojamiento = $_GET['ID_ALOJAMIENTO'];

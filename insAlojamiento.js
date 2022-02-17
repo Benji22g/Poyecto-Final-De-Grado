@@ -4,7 +4,7 @@ e.preventDefault();
 console.log("click");
  var datos = new FormData(formulario);
  var insert = document.getElementById("insert");
-var p = "INSERT";
+    var p = "the housing has been inserted correctly";
  datos.append("NAME",datos.get("name"));
  datos.append("PRICEDAY",datos.get("priceday"));
  datos.append("DATE",datos.get("date"));

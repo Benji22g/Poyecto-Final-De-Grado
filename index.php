@@ -35,6 +35,7 @@ include('usuarios.php');
 <?php
         if($_SESSION['admin']){
       ?>
+<div class="scroll-bengi">      
   <div class="wrapper ">
     <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
       <div class="logo"><a onClick="window.location.reload();" class="simple-text logo-normal">
@@ -123,10 +124,15 @@ include('usuarios.php');
      <div class="produtos" id="insertuser">
 
       </div>
+      <script>
+      var iduser = "<?php echo json_encode($_SESSION['id']); ?>";
+
+      </script>
       <script src="./getAlojamientoUser.js"></script>
       <?php
         }
       ?>
+    </div>
   </div>
 
 

@@ -111,31 +111,11 @@ include('usuarios.php');
     </div>
     <center>
       <br>
-      <div class="produtos">
-        <div class="card" style="width:300px">
-          <center><img class="card-img-top" style="width:200px; height:200px;" src="https://community.cloudflare.steamstatic.com/economy/image/fWFc82js0fmoRAP-qOIPu5THSWqfSmTELLqcUywGkijVjZULUrsm1j-9xgEYfBVACiT2sD18hMHhBeaCAe4HpNY84a9Z2CRslE8rN-bkZjU2cVybUfgHDPY4pwq5WSFm7MU7V4Xv9etXLVjn5tfAN7V-LpgSSJn0O70B/360fx360f" alt=""></center>
-          <div class="card-body">
-            <h4 class="card-title">ALOJAMIENTO 1</h4>
-            <p class="card-text" style="color: black;">Chapéu nível 69</p>
-            <a href="#" class="btn btn-primary">R$ 680,08</a>
-          </div>
-        </div>
-        <div class="card" style="width:300px;">
-          <center><img class="card-img-top" style="width:200px; height:200px;" src="https://community.cloudflare.steamstatic.com/economy/image/fWFc82js0fmoRAP-qOIPu5THSWqfSmTELLqcUywGkijVjZULUrsm1j-9xgEMaQkUTxr2vTx8mMnvA-aHAfQ_ktk664MayTdinxVwPffiZAhuZgHPUPUPDK0F4w3tG3QN7sJwQN6g8vVeK1jp4YuVYuElNI1NTsLTX6OFYFv-6Usw0vBVfMHb9CPoiX7taTgORVO1rSRyrjem/360fx360f" alt=""></center>
-          <div class="card-body">
-            <h4 class="card-title">ALOJAMIENTO 1</h4>
-            <p class="card-text" style="color: black;">Espingarda Nível Comando</p>
-            <a href="#" class="btn btn-primary">R$ 651,00</a>
-          </div>
-        </div>
-        <div class="card" style="width:300px;">
-          <center><img class="card-img-top" style="width:200px; height:200px;" src="https://community.cloudflare.steamstatic.com/economy/image/fWFc82js0fmoRAP-qOIPu5THSWqfSmTELLqcUywGkijVjZULUrsm1j-9xgEBeQtADiTxtzdXt9vzBOazBOESnN97t5EC2GY8xFR9YrHkMWIxKlOUUvJdDaRrrFu8WSMw6cE3B4Hn9e5eKBKv6tVORHpMtw/360fx360f" alt=""></center>
-          <div class="card-body">
-            <h4 class="card-title">ALOJAMIENTO 1</h4>
-            <p class="card-text" style="color: black;">Camisa nível 96</p>
-            <a href="#" class="btn btn-primary">R$ 201,54</a>
-          </div>
-        </div>
+      <form id="idsession">
+        <input type="hidden" value=<?php $_SESSION["id"]?> name="id">
+      </form>
+      <div class="produtos" id="insert">
+
       </div>
   </div>
   <script src="js/classie.js"></script>
@@ -143,7 +123,9 @@ include('usuarios.php');
   <script src="js/main.js"></script>
   <script>
     var usuario = "<?php echo $_SESSION['usuario']; ?>";
+    var iduser = "<?php echo json_encode($_SESSION['id']); ?>";
   </script>
+  <script src="./getAlquiler.js"></script>
 </body>
 
 </html>
