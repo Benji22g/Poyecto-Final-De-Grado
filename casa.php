@@ -86,7 +86,7 @@ include('usuarios.php');
          <br>
         <div class="produtos">
 
-      <div div>
+      <div id="insert">
         <p>jdsahdjsahdjiash</p>
       </div>
   </div>
@@ -97,5 +97,6 @@ include('usuarios.php');
     var usuario = "<?php echo $_SESSION['usuario']; ?>";
   </script>
 </body>
+<script src="./getAlojamientocasa.js"></script>
 
 </html>

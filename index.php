@@ -109,20 +109,25 @@ include('usuarios.php');
        }
         ?>
     </div>
-    <center>
       <br>
       <div class="produtos" id="insert">
 
       </div>
-    </center>
+
   </div>
+
+
   <script src="js/classie.js"></script>
   <script src="js/dummydata.js"></script>
   <script src="js/main.js"></script>
   <script>
     var usuario = "<?php echo $_SESSION['usuario']; ?>";
   </script>
+  
+  
 </body>
 <script src="./getAlojamiento.js"></script>
+<script>
 
+</script>
 </html>

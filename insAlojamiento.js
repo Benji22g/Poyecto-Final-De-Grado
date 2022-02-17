@@ -14,8 +14,7 @@ console.log("click");
  var idcategory = datos.get("idcategory");
 
  var xhttp = new XMLHttpRequest();
- xhttp.open("INSERT", "http://localhost/astu-poyecto%20final/Poyecto-Final-De-Grado-main/apiAlojamiento.php?PRICEDAY=" + priceday + "&DATE=" +date+"&NAME="+ name+"&CAPACITY="+capacity + "&ADDRESS="+ address+ "&url="+ url+ "&RESERVED="+ reserved+ "&ID_LOCALIDAD="+ idlocalidad+ "&ID_CATEGORY="+ idcategory, false);
- console.log("http://localhost/astu-poyecto%20final/Poyecto-Final-De-Grado-main/apiAlojamiento.php?PRICEDAY=" + priceday + "&DATE=" +date+"&NAME="+ name+"&CAPACITY="+capacity + "&ADDRESS="+ address+ "&url="+ url+ "&RESERVED="+ reserved+ "&ID_LOCALIDAD="+ idlocalidad+ "&ID_CATEGORY="+ idcategory)
+ xhttp.open("POST", "../Poyecto-Final-De-Grado-main/apiAlojamiento.php?PRICEDAY=" + priceday + "&DATE=" +date+"&NAME="+ name+"&CAPACITY="+capacity + "&ADDRESS="+ address+ "&url="+ url+ "&RESERVED="+ reserved+ "&ID_LOCALIDAD="+ idlocalidad+ "&ID_CATEGORY="+ idcategory, false);
  xhttp.send();
 
 })

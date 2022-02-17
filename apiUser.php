@@ -10,9 +10,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     while ($row = mysqli_fetch_object($results)) {
         array_push($data, $row);
     }
-    echo json_encode($data);
+    echo json_encode($data);    
 } elseif ($_SERVER['REQUEST_METHOD'] == 'PUT') {
-    header("HTTP/1.1 200 UPDATE");
     $idUser = $_GET['ID'];
     $email = $_GET['EMAIL'];
     $nick = $_GET['NICK'];
@@ -20,9 +19,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $lastname = $_GET['LASTNAME'];
     $password = $_GET['SENHA'];
     $admin = $_GET['ADMIN'];
-    $orderBD = "UPDATE USUARIOS SET EMAIL='$email', NICK='$nick',NAME='$name',LASTNAME='$lastname', ADMIN ='$admin' WHERE ID=$idUser";
+    header("HTTP/1.1 200 UPDATE");
+    $orderBD = "UPDATE USUARIOS SET EMAIL='$email', NICK='$nick',NAME='$name',LASTNAME='$lastname', ADMIN =$admin WHERE ID=$idUser";
     $conn->query($orderBD);
-    echo json_encode($results->fetch_all());
 } elseif ($_SERVER['REQUEST_METHOD'] == 'DELETE') {
     header("HTTP/1.1 200 DELETE");
     $idUser = $_GET['ID'];

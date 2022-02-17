@@ -79,7 +79,7 @@ include('usuarios.php');
     </div>
     <center>
       <br>
-      <div class="produtos">
+      <div class="produtoshire">
       <div class="card" style="width:300px">
           <center><img class="card-img-top" style="width:200px; height:200px;" src="img/3643769-building-home-house-main-menu-start_113416.svg" alt=""></center>
           <div class="card-body">

@@ -1,6 +1,6 @@
 window.onload = function (){
     var xhttp= new XMLHttpRequest();
-    xhttp.open("GET","../Poyecto-Final-De-Grado-main/apiAlojamiento.php",true);
+    xhttp.open("GET",`../Poyecto-Final-De-Grado-main/apiAlojamiento.php?ID_CATEGORY=${2}`,true);
     xhttp.send();
     xhttp.onreadystatechange=function() {
         if (xhttp.readyState == 4 && this.status==200) {
@@ -9,7 +9,6 @@ window.onload = function (){
         for(i = 0; i < variable.length; i++){
 
             var insert = document.getElementById("insert");
-
             var id = variable[i].ID_ALOJAMIENTO;
             var name = variable[i].NAME;
             var priceday = variable[i].PRICEDAY;
