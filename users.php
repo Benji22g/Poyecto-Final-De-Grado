@@ -100,14 +100,15 @@ include('usuarios.php');
         </div>
         <div>
           <form id="formularioupd">
-            <input type="number" name="id" placeholder="id"><br><br>
-            <input type="text" name="nick" placeholder="nick" >
-            <input type="text" name="name" placeholder="name">
-            <input type="text" name="lastname" placeholder="lastname">
-            <input type="text" name="email" placeholder="email" ><br><br>
-            <input type="number" name="admin" placeholder="admin">
-            <button type="submit" name="update" value="update"> Update</button>
+            <input type="number" name="id" placeholder="id" class="form-control-sm">
+            <input type="text" name="nick" placeholder="nick" class="form-control-sm">
+            <input type="text" name="name" placeholder="name"class="form-control-sm "><br>
+            <input type="text" name="lastname" placeholder="lastname"class="form-control-sm mt-3">
+            <input type="text" name="email" placeholder="email"class="form-control-sm mt-3">
+            <input type="number" name="admin" placeholder="admin"class="form-control-sm mt-3">
           </form>
+          <button type="submit" name="insert" value="insert" class='btn btn-warning mt-3'> update</button>
+
         </div>
 
       </center>

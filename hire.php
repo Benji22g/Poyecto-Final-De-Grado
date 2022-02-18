@@ -103,18 +103,18 @@ include('usuarios.php');
         </div>
       </div>
       <div>
-        <form id="formularioins">
-            <input type="text" name="name" placeholder="name">
-            <input type="number" name="priceday" placeholder="priceday">
-            <input type="date" name="date" placeholder="date" >
-            <input type="number" name="capacity" placeholder="capacity">
-            <input type="text" name="address" placeholder="address"><br>
-            <input type="text" name="url" placeholder="url">
-            <input type="number" name="reserved" placeholder="reserved">
-            <input type="number" name="quantityDay" placeholder="quantityDay">
-            <input type="text" name="idlocalidad" placeholder="idlocalidad">
-            <input type="text" name="idcategory" placeholder="idcategory"><br>
-            <button type="submit" name="insert" value="insert"> Insert</button>
+      <form id="formularioins">
+            <input type="text" name="name" placeholder="name" class="form-control-sm">
+            <input type="number" name="priceday" placeholder="priceday"class="form-control-sm">
+            <input type="date" name="date" placeholder="date" class="form-control-sm">
+            <input type="number" name="capacity" placeholder="capacity"class="form-control-sm">
+            <input type="text" name="address" placeholder="address"class="form-control-sm"><br>
+            <input type="text" name="url" placeholder="url"class="form-control-sm mt-3">
+            <input type="number" name="reserved" placeholder="reserved"class="form-control-sm mt-3">
+            <input type="number" name="quantityDay" placeholder="quantityDay"class="form-control-sm mt-3">
+            <input type="text" name="idlocalidad" placeholder="idlocalidad"class="form-control-sm mt-3">
+            <input type="text" name="idcategory" placeholder="idcategory"class="form-control-sm mt-3"><br>
+            <button type="submit" name="insert" value="insert" class='btn btn-warning mt-3'> Insert</button>
         </form>
         <div id="insert">
           

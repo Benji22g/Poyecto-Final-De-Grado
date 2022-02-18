@@ -134,34 +134,12 @@ window.onload = function (){
                 mcategoria = 'Pisos'
 
             }
-        /*
-            var h1 = '<h4 class="card-title">'+name+'</h4>';
-            var h2 = '<p><img src=img/'+url+'.jpg alt= Image height=300 width=300><p>';
-            var p1 = '<p id="hola" class="card-text" style="color: black;" value ="tuki">'+id+'</p>';
-            var p2 = '<p class="card-text" style="color: black;">'+priceday+'</p>';
-            var p3 = '<p cass="card-text" style="color: black;">'+address+'</p>';
-            var p4 = '<p class="card-text" style="color: black;">'+localidad+'</p>';
-            var p5 = '<p class="card-text" style="color: black;">'+categoria+'</p>';
-            var p6 = '<p class="card-text" style="color: black;">'+date+ " "+quantityDay+'</p><br>';
-            var p7 = '<p class="card-text" style="color: black;">'+capacity+'</p><br>';
-            */
+           
             var b1 = `<td><button id="${id}" type="submit" class="btn btn-danger btn-block text-center" name="Eliminar" value="Eliminar" onclick=deleteAlojamiento(this)>  eliminar</td>`;
-
             var registro = "<section class='py-5'><div class='container px-4 px-lg-5 my-5'><div class='row gx-4 gx-lg-5 align-items-center'><div class='col-md-6'  id='insert'><img src=img/" + url + ".jpg alt= Image height=100% width=100%></div><div class='col-md-6'><div class='small mb-1'><h2>" + mcategoria + "</h2></div><h1 class='display-5 fw-bolder'>" + name + "</h1><div class='fs-5 mb-5'><span class='text-decoration-line-through'>" + priceday + '€/día --> ' + "</span>"+quantityDay*priceday+" € TOTAL<span><p>"+mlocalidad+"</p><p>"+date+"</p><p>Direccion="+address+"</p><p>Cantidad Personas="+capacity+"</p></span></div><p class='lead'></p><div class='d-flex'></div></div></div></div></section>"
             insertadmin.insertAdjacentHTML('beforeend', registro);
             insertadmin.insertAdjacentHTML('beforeend', b1);
-/*
-            insertadmin.insertAdjacentHTML('beforeend', h1);
-            insertadmin.insertAdjacentHTML('beforeend', h2);
-            insertadmin.insertAdjacentHTML('beforeend', p1);
-            insertadmin.insertAdjacentHTML('beforeend', p2);
-            insertadmin.insertAdjacentHTML('beforeend', p3);
-            insertadmin.insertAdjacentHTML('beforeend', p4);
-            insertadmin.insertAdjacentHTML('beforeend', p5);
-            insertadmin.insertAdjacentHTML('beforeend', p6);
-            insertadmin.insertAdjacentHTML('beforeend', p7);
-            insertadmin.insertAdjacentHTML('beforeend', b1);
-*/
+
         }
         
         
