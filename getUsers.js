@@ -1,6 +1,6 @@
 window.onload = function () {
     var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "http://localhost/astu-poyecto%20final/Poyecto-Final-De-Grado-main/apiUser.php", true);
+    xhttp.open("GET", "../Poyecto-Final-De-Grado-main/apiUser.php", true);
     xhttp.send();
     xhttp.onreadystatechange = function () {
         if (xhttp.readyState == 4 && this.status == 200) {
